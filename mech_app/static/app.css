@@ -1,0 +1,116 @@
+@import 'https://unpkg.com/open-props';
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500&family=Oxanium:wght@200..800&display=swap');
+
+html {
+  --font-body: 'Outfit', sans-serif;
+  --font-title: 'Oxanium', sans-serif;
+}
+
+:root {
+  --surface-1: hsl(104 12 56);
+  --surface-2: hsl(104 12 12);
+  --surface-3: hsl(104 12 22);
+  --text-1: hsl(102 21 7);
+  --text-2: hsl(104 12 18);
+  --text-3: hsl(28 42 91);
+  --text-4: hsl(177 31 24);
+  --border: hsl(103 11 12);
+  --link: hsl(44 12 56);
+
+  --space-sm: var(--size-3);
+  --space-lg: var(--size-5);
+
+  --timing-function-slow-ease: var(--ease-1);
+
+  --font-size-sm: var(--font-size-0);
+  --font-size-body: 1.125rem;
+  --line-height-body: 1.6em;
+  --font-weight-normal: var(--font-weight-5);
+  --font-weight-bold: var(--font-weight-6);
+  --font-weight-hero: var(--font-weight-8);
+  --letter-spacing-body: 0.03em;
+  --letter-spacing-title: -0.03em;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background-image: url('bglines.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: var(--surface-1);
+  color: var(--text-1);
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  letter-spacing: var(--letter-spacing-body);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-body);
+}
+
+.button {
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  background: transparent;
+  border-radius: var(--radius-2);
+  cursor: pointer;
+  display: inline-grid;
+  gap: var(--space-sm);
+  grid-auto-flow: column;
+  padding: 12px 24px;
+  place-items: center;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition: background-color 0.2s var(--timing-function-slow-ease);
+}
+
+/* reset stuff */
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+:where(:not(dialog)) {
+  margin: 0;
+}
+
+:where(img, svg, video) {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+:where(input, button, textarea, select) {
+  font: inherit;
+}
+
+:where(html) {
+  -webkit-text-size-adjust: none;
+  @media (prefers-reduced-motion: no-preference) {
+    scroll-behavior: smooth;
+  }
+}
+
+/* animations */
+
+.bloom-out-1 {
+  animation: var(--animation-bloom-fade-out) forwards,
+    var(--animation-scale-down);
+  animation-timing-function: var(--ease-elastic-in-out-3);
+  animation-duration: 1s;
+}
+
+.bloom-out-2 {
+  animation: var(--animation-scale-down), var(--animation-bloom-fade-out);
+  animation-timing-function: var(--ease-elastic-in-out-4);
+}
+
+.super-ping {
+  animation: var(--animation-bloom-fade-in), var(--animation-ping);
+}

@@ -1,0 +1,98 @@
+/* Landing Page Additional CSS */
+
+.container {
+  display: grid;
+  place-items: center;
+}
+
+.lines {
+  margin-top: -11rem;
+}
+
+.main-title {
+  color: var(--text-2);
+  font-family: var(--font-title);
+  font-size: 208px;
+  font-weight: var(--font-weight-hero);
+  letter-spacing: var(--letter-spacing-title);
+  line-height: 1.3em;
+}
+
+.primary {
+  width: 100%;
+  background: var(--text-1);
+  color: var(--surface-1);
+}
+
+.primary:hover {
+  color: var(--text-1);
+  background-color: var(--link);
+}
+
+.controls {
+  padding-top: 16px;
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-items: center;
+  padding-inline: 32px;
+  gap: 24px;
+}
+
+.card {
+  display: grid;
+  background-color: var(--surface-3);
+  color: var(--text-3);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-3);
+  padding: 16px;
+}
+
+.radial-gradient {
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.28) 0%,
+    rgba(0, 212, 255, 0) 60%
+  );
+}
+
+.content {
+  padding-inline: 8px;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  font-size: 1.375rem;
+}
+
+.card-title {
+  font-family: var(--font-title);
+  font-size: 1.75rem;
+  font-weight: var(--font-weight-bold);
+}
+
+.align-right {
+  text-align: end;
+}
+
+.card-image {
+  object-fit: cover;
+  object-position: center;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  border: 5px solid var(--border);
+  border-radius: var(--radius-3);
+  gap: 16px;
+}
+
+.image-temp {
+  width: 500px;
+  height: auto;
+}
