@@ -22,7 +22,7 @@ Clone This repo, then:
 - start uvicorn:
 
   ```
-  uvicorn mech_app.main:app --reload
+  uvicorn mech_app.api:app --reload
   ```
 
 - open [localhost](http://127.0.0.1:8000/)
