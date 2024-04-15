@@ -34,7 +34,6 @@ html {
 
 body {
   -webkit-font-smoothing: antialiased;
-  background-image: url('bglines.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -45,6 +44,18 @@ body {
   letter-spacing: var(--letter-spacing-body);
   font-weight: var(--font-weight-normal);
   line-height: var(--line-height-body);
+}
+
+@media (max-width: 848px) {
+  body {
+    background-image: url('bglinesvert.svg');
+  }
+}
+
+@media (min-width: 848px) {
+  body {
+    background-image: url('bglines3.svg');
+  }
 }
 
 .button {
