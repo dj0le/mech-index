@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="{{ url_for('static', path='/favicon.png') }}" />
+    <title>MechIndex</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', path='/carousel.css') }}"
+    />
+  </head>
+  <body>
+    <nav>
+      <h1>Mech Index</h1>
+      <p>email and github</p>
+    </nav>
+    <main>
+<div class="preview-img">
+  <img src=""{{ url_for('static', path='/mech_images/small_MWO_Archer.webp') }}"" alt="mecha card image">
+</div>
+
+<div class="container">
+  <div class="gallery"></div>
+</div>
+
+      <section>
+        <div class="card-list">
+          {% for mech in mech_cards %}
+          <div class="card">
+            <div class="radial-gradient">
+              <img
+                class="card-image"
+                src="{{ url_for('static', path='/mech_thumbnails/' + mech.thumbnail ) }}"
+                alt="TWO Battlemech"
+                width="200"
+                height="200"
+              />
+            </div>
+            <div>
+              <div class="content">
+                <h3 class="card-title">{{ mech.chassis }}</h3>
+                <div class="info">
+                  <p>{{ mech.weightClass}}</p>
+                  <p class="align-right">{{ mech.year }}</p>
+                </div>
+              </div>
+
+              <div class="controls">
+                <a href="mechs/{{ mech.id }}" class="button primary">
+                  Overview
+                  <svg
+                    width="18"
+                    height="10"
+                    viewBox="0 0 18 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M13.1667 1.6665L16.5 4.99984M16.5 4.99984L13.1667 8.33317M16.5 4.99984L1.5 4.99984"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>date and spaceshift link</p>
+      <p>some other thing</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+  </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"></script>
+    <script src="{{ url_for('static', path='/script.js') }}"></script>
+  </body>
+</html>

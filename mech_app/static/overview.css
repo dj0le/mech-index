@@ -122,10 +122,3 @@
     padding-top: 2rem;
   }
 }
-
-/* reset stuff */
-
-body {
-  display: grid;
-  place-items: center;
-}

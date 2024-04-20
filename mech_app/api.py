@@ -22,11 +22,30 @@ def get_db():
     finally:
         db.close()
 
+def get_filters():
+    with Session(engine) as db:
+        ranks = []
+        mech_classes = db.query(models.Mech.weightClass).distinct()
+        for rank in mech_classes:
+            print(rank)
+            ranks.append(rank)
+            return ranks
+    
+filters = sorted(get_filters())
+print(filters)
+
 @app.get("/", response_class=HTMLResponse, include_in_schema=False)
-def get_mech_cards(request: Request, skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
+def get_mech_cards(request: Request, skip: int = 0, limit: int = 16, db: Session = Depends(get_db)):
     mech_short = crud.get_mech_cards(db, skip=skip, limit=limit)
     return templates.TemplateResponse(
         "index.html", {"request": request, 'mech_cards': mech_short}
+    )
+
+@app.get("/carousel/", response_class=HTMLResponse, include_in_schema=False)
+def get_mech_cards(request: Request, skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
+    mech_short = crud.get_mech_cards(db, skip=skip, limit=limit)
+    return templates.TemplateResponse(
+        "carousel.html", {"request": request, 'mech_cards': mech_short}
     )
 
 @app.get("/mechs/", response_model=list[schemas.Mech])
@@ -40,5 +59,5 @@ def get_mech(request: Request, mech_id: int, db: Session = Depends(get_db)):
     if mech_details is None:
         raise HTTPException(status_code=404, detail="Unknown Mech")
     return templates.TemplateResponse(
-        "overview.html", {"request": request, 'mech': mech_details}
+        "overview2.html", {"request": request, 'mech': mech_details}
     )
