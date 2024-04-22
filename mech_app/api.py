@@ -35,17 +35,10 @@ filters = sorted(get_filters())
 print(filters)
 
 @app.get("/", response_class=HTMLResponse, include_in_schema=False)
-def get_mech_cards(request: Request, skip: int = 0, limit: int = 16, db: Session = Depends(get_db)):
-    mech_short = crud.get_mech_cards(db, skip=skip, limit=limit)
-    return templates.TemplateResponse(
-        "index.html", {"request": request, 'mech_cards': mech_short}
-    )
-
-@app.get("/carousel/", response_class=HTMLResponse, include_in_schema=False)
 def get_mech_cards(request: Request, skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
     mech_short = crud.get_mech_cards(db, skip=skip, limit=limit)
     return templates.TemplateResponse(
-        "carousel.html", {"request": request, 'mech_cards': mech_short}
+        "index.html", {"request": request, 'mech_cards': mech_short}
     )
 
 @app.get("/mechs/", response_model=list[schemas.Mech])
