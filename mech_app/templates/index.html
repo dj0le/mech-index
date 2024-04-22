@@ -24,9 +24,9 @@
           <div>
             <button id="left"><</button>
           </div>
-          <div class="carousel">
+          <ul class="carousel">
               {% for mech in mech_cards %}
-              <div class="card">
+              <li class="card">
                 <div class="radial-gradient">
                   <img
                     class="card-image"
@@ -66,10 +66,10 @@
                     </a>
                   </div>
                 </div>
-              </div>
+              </li>
               {% endfor %}
 
-          </div>
+            </ul>
           <div>
             <button id="right">></button>
           </div>

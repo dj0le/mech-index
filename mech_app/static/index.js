@@ -1,54 +1,46 @@
 // js for front carousel
 
-const carousel = Array.prototype.slice.call(document.querySelectorAll('.card'));
-const arrowBtns = document.querySelectorAll('.wrapper button');
+const cards = document.querySelectorAll('.card');
+const navigation = document.querySelectorAll('.wrapper button');
 
-let active = carousel.length / 2;
+let currentCard = 0;
 
-arrowBtns.forEach((btn) => {
+navigation.forEach((btn) => {
   btn.addEventListener('click', () => {
-    active = btn.id === 'left' ? active - 1 : active + 1;
-    loadShow();
+    if (btn.id === 'right') {
+      currentCard = (currentCard + 1) % cards.length;
+    }
+    if (btn.id === 'left') {
+      currentCard = (currentCard - 1 + cards.length) % cards.length;
+    }
+    loadCards();
   });
 });
 
-let carouselInView = 3;
-
-// carouselSlice
-//   .slice(-carouselInView)
-//   .reverse()
-//   .forEach((card) => {
-//     carousel.insertAdjacentHTML('afterbegin', card.outerHTML);
-//   });
-
-// carouselSlice.slice(0, carouselInView).forEach((card) => {
-//   carousel.insertAdjacentHTML('beforeend', card.outerHTML);
-// });
-
-function loadShow() {
+function loadCards() {
   let stt = 0;
-  carousel[active].style.transform = `none`;
-  carousel[active].style.zIndex = 1;
-  carousel[active].style.filter = 'none';
-  carousel[active].style.opacity = 1;
-  for (var i = active + 1; i < carousel.length; i++) {
+  cards[currentCard].style.transform = `none`;
+  cards[currentCard].style.zIndex = 1;
+  cards[currentCard].style.filter = 'none';
+  cards[currentCard].style.opacity = 1;
+  for (var i = currentCard + 1; i != cards.length; i++) {
     stt++;
-    carousel[i].style.transform = `translateX(${120 * stt}px) scale(${
-      1 - 0.2 * stt
-    }) perspective(16px) rotateY(-1deg)`;
-    carousel[i].style.zIndex = -stt;
-    carousel[i].style.filter = 'blur(1px)';
-    carousel[i].style.opacity = stt > 3 ? 0 : 0.4;
+    cards[i].style.transform = `translateX(${120 * stt}px) translateY(${
+      40 * stt
+    }px) scale(${1 - 0.2 * stt}) perspective(16px) rotateY(-1deg)`;
+    cards[i].style.zIndex = -stt;
+    cards[i].style.filter = 'blur(1px)';
+    cards[i].style.opacity = stt > 3 ? 0 : 0.4;
   }
   stt = 0;
-  for (var i = active - 1; i >= 0; i--) {
+  for (var i = currentCard - 1; i >= 0; i--) {
     stt++;
-    carousel[i].style.transform = `translateX(${-120 * stt}px) scale(${
-      1 - 0.2 * stt
-    }) perspective(16px) rotateY(1deg)`;
-    carousel[i].style.zIndex = -stt;
-    carousel[i].style.filter = 'blur(1px)';
-    carousel[i].style.opacity = stt > 3 ? 0 : 0.4;
+    cards[i].style.transform = `translateX(${-120 * stt}px) translateY(${
+      40 * stt
+    }px) scale(${1 - 0.2 * stt}) perspective(16px) rotateY(1deg)`;
+    cards[i].style.zIndex = -stt;
+    cards[i].style.filter = 'blur(1px)';
+    cards[i].style.opacity = stt > 3 ? 0 : 0.4;
   }
 }
-loadShow();
+loadCards();
