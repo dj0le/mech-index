@@ -33,67 +33,91 @@ navigation.forEach((btn) => {
 });
 
 function loadCards() {
+  const card = cards[currentCard];
+  const extraCard = extraCards[currentCard];
+
+  card.style.opacity = 1;
   for (var i = currentCard + 1; i != cards.length; i++) {
     cards[i].style.opacity = 0;
   }
 
-  cards[currentCard].style.transform = `none`;
-  cards[currentCard].style.zIndex = 1;
-  cards[currentCard].style.filter = 'none';
-  cards[currentCard].style.opacity = 1;
+  // cards[extraCard.plus1].style.opacity = 0.4;
+  // cards[extraCard.plus2].style.opacity = 0.4;
+  // cards[extraCard.plus3].style.opacity = 0.4;
+  // cards[extraCard.minus1].style.opacity = 0.4;
+  // cards[extraCard.minus2].style.opacity = 0.4;
+  // cards[extraCard.minus3].style.opacity = 0.4;
+  // cards[extraCard.plus4].style.opacity = 0;
+  // cards[extraCard.minus4].style.opacity = 0;
+  // cards[extraCard.plus4].style.zIndex = -4;
+  // cards[extraCard.minus4].style.zIndex = -4;
+
+  const base = {
+    transform: 'none',
+    zIndex: 1,
+    filter: 'none',
+  };
+
+  function setCardStyles(card, style) {
+    card.style.transform = style.transform;
+    card.style.zIndex = style.zIndex;
+    card.style.filter = style.filter;
+  }
+
+  setCardStyles(card, base);
 
   cards[
-    extraCards[currentCard].minus4
+    extraCard.minus4
   ].style.transform = `translateX(-480px) translateY(160px) scale(0.2) perspective(16px) rotateY(1deg)`;
-  cards[extraCards[currentCard].minus4].style.zIndex = -4;
-  cards[extraCards[currentCard].minus4].style.opacity = 0;
+  cards[extraCard.minus4].style.zIndex = -4;
+  cards[extraCard.minus4].style.opacity = 0;
 
   cards[
-    extraCards[currentCard].minus3
+    extraCard.minus3
   ].style.transform = `translateX(-360px) translateY(120px) scale(0.4) perspective(16px) rotateY(1deg)`;
-  cards[extraCards[currentCard].minus3].style.zIndex = -3;
-  cards[extraCards[currentCard].minus3].style.filter = 'blur(1px)';
-  cards[extraCards[currentCard].minus3].style.opacity = 0.4;
+  cards[extraCard.minus3].style.zIndex = -3;
+  cards[extraCard.minus3].style.filter = 'blur(1px)';
+  cards[extraCard.minus3].style.opacity = 0.4;
 
   cards[
-    extraCards[currentCard].minus2
+    extraCard.minus2
   ].style.transform = `translateX(-240px) translateY(80px) scale(0.6) perspective(16px) rotateY(1deg)`;
-  cards[extraCards[currentCard].minus2].style.zIndex = -2;
-  cards[extraCards[currentCard].minus2].style.filter = 'blur(1px)';
-  cards[extraCards[currentCard].minus2].style.opacity = 0.4;
+  cards[extraCard.minus2].style.zIndex = -2;
+  cards[extraCard.minus2].style.filter = 'blur(1px)';
+  cards[extraCard.minus2].style.opacity = 0.4;
 
   cards[
-    extraCards[currentCard].minus1
+    extraCard.minus1
   ].style.transform = `translateX(-120px) translateY(40px) scale(0.8) perspective(16px) rotateY(1deg)`;
-  cards[extraCards[currentCard].minus1].style.zIndex = -1;
-  cards[extraCards[currentCard].minus1].style.filter = 'blur(1px)';
-  cards[extraCards[currentCard].minus1].style.opacity = 0.4;
+  cards[extraCard.minus1].style.zIndex = -1;
+  cards[extraCard.minus1].style.filter = 'blur(1px)';
+  cards[extraCard.minus1].style.opacity = 0.4;
 
   cards[
-    extraCards[currentCard].plus1
+    extraCard.plus1
   ].style.transform = `translateX(120px) translateY(40px) scale(0.8) perspective(16px) rotateY(-1deg)`;
-  cards[extraCards[currentCard].plus1].style.zIndex = -1;
-  cards[extraCards[currentCard].plus1].style.filter = 'blur(1px)';
-  cards[extraCards[currentCard].plus1].style.opacity = 0.4;
+  cards[extraCard.plus1].style.zIndex = -1;
+  cards[extraCard.plus1].style.filter = 'blur(1px)';
+  cards[extraCard.plus1].style.opacity = 0.4;
 
   cards[
-    extraCards[currentCard].plus2
+    extraCard.plus2
   ].style.transform = `translateX(240px) translateY(80px) scale(0.6) perspective(16px) rotateY(-1deg)`;
-  cards[extraCards[currentCard].plus2].style.zIndex = -2;
-  cards[extraCards[currentCard].plus2].style.filter = 'blur(1px)';
-  cards[extraCards[currentCard].plus2].style.opacity = 0.4;
+  cards[extraCard.plus2].style.zIndex = -2;
+  cards[extraCard.plus2].style.filter = 'blur(1px)';
+  cards[extraCard.plus2].style.opacity = 0.4;
 
   cards[
-    extraCards[currentCard].plus3
+    extraCard.plus3
   ].style.transform = `translateX(360px) translateY(120px) scale(0.4) perspective(16px) rotateY(-1deg)`;
-  cards[extraCards[currentCard].plus3].style.zIndex = -3;
-  cards[extraCards[currentCard].plus3].style.filter = 'blur(1px)';
-  cards[extraCards[currentCard].plus3].style.opacity = 0.4;
+  cards[extraCard.plus3].style.zIndex = -3;
+  cards[extraCard.plus3].style.filter = 'blur(1px)';
+  cards[extraCard.plus3].style.opacity = 0.4;
 
   cards[
-    extraCards[currentCard].plus4
+    extraCard.plus4
   ].style.transform = `translateX(480px) translateY(160px) scale(0.2) perspective(16px) rotateY(-1deg)`;
-  cards[extraCards[currentCard].plus4].style.zIndex = -4;
-  cards[extraCards[currentCard].plus4].style.opacity = 0;
+  cards[extraCard.plus4].style.zIndex = -4;
+  cards[extraCard.plus4].style.opacity = 0;
 }
 loadCards();
