@@ -6,24 +6,18 @@ const extraCards = [];
 let currentCard = 0;
 
 for (let i = 0; i < cards.length; i++) {
-  let plus1 = (i + 1) % cards.length;
-  let plus2 = (i + 2) % cards.length;
-  let plus3 = (i + 3) % cards.length;
-  let plus4 = (i + 4) % cards.length;
-  let minus1 = (i - 1 + cards.length) % cards.length;
-  let minus2 = (i - 2 + cards.length) % cards.length;
-  let minus3 = (i - 3 + cards.length) % cards.length;
-  let minus4 = (i - 4 + cards.length) % cards.length;
-  extraCards.push({
-    plus1: plus1,
-    plus2: plus2,
-    plus3: plus3,
-    plus4: plus4,
-    minus1: minus1,
-    minus2: minus2,
-    minus3: minus3,
-    minus4: minus4,
-  });
+  const offsets = [1, 2, 3, 4].map((offset) => ({
+    plus: offset,
+    minus: -offset,
+  }));
+  const card = {};
+  for (const o of offsets) {
+    card[`plus${o.plus}`] =
+      o.plus === 1 ? (i + 1) % cards.length : (i + o.plus) % cards.length;
+    card[`minus${Math.abs(o.minus)}`] =
+      o.minus === 1 ? i : (i + o.minus + cards.length) % cards.length;
+  }
+  extraCards.push(card);
 }
 
 navigation.forEach((btn) => {
