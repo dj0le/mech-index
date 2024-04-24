@@ -51,7 +51,6 @@ function loadCards() {
         : `translateX(${(i - 3) * 120}px) translateY(${(i - 3) * 40}px) scale(${
             (8 - i) * 0.2
           }) perspective(16px) rotateY(-1deg)`;
-    console.log(card);
   }
 }
 loadCards();

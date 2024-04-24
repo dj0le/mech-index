@@ -52,5 +52,5 @@ def get_mech(request: Request, mech_id: int, db: Session = Depends(get_db)):
     if mech_details is None:
         raise HTTPException(status_code=404, detail="Unknown Mech")
     return templates.TemplateResponse(
-        "overview2.html", {"request": request, 'mech': mech_details}
+        "overview.html", {"request": request, 'mech': mech_details}
     )
