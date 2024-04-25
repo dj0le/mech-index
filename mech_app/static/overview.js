@@ -1,74 +1,26 @@
-
 const navigation = document.querySelectorAll('.wrapper button');
-let currentCard = {{ mech.id }};
-let cardsLength = 80;
+const currentUrl = window.location.href;
+let mechId = parseInt(currentUrl.split('/').pop());
+let cardsLength = 83;
 
 navigation.forEach((btn) => {
   btn.addEventListener('click', () => {
-    btn.id === 'right'
-      ? (currentCard = (currentCard + 1) % cardsLength)
-      : (currentCard = (currentCard - 1 + cardsLength) % cardsLength);
+    fetchNew(mechId);
+
+    function fetchNew(mechId) {
+      let direction = 1;
+      if (btn.id === 'right') {
+        mechId = (mechId + direction) % cardsLength;
+      } else {
+        mechId = (mechId - direction + cardsLength) % cardsLength;
+      }
+      fetch(`${mechId}`).then((response) => {
+        if (response.ok) {
+          window.location = `${mechId}`;
+        } else {
+          fetchNew(mechId);
+        }
+      });
+    }
   });
 });
-
-
-
-// const mechDetails = [
-//   '{{ mech.year }}',
-//   'Groundhog Day',
-//   'Carrot Cake Day',
-//   'Wear Red Day',
-//   "Weatherperson's Day",
-//   'Chopsticks Day',
-//   'Periodic Table Day',
-//   'Kite Flying Day',
-//   'Pizza Day',
-//   'Umbrella Day',
-//   "Inventor's Day",
-//   'Global Movie Day',
-//   'Tortellini Day',
-//   "Valentine's Day",
-// ];
-
-// const ulEl = document.querySelector('ul');
-// let infoNumber = 0;
-// let activeIndex = 14;
-// const rotate = -360 / 14;
-// init();
-
-// function init() {
-//   mechDetails.forEach((detail, idx) => {
-//     const liEl = document.createElement('li');
-//     liEl.style.setProperty('--detail_idx', idx);
-//     liEl.innerHTML = `<mechRow>${idx + 1}<span>${detail}</span></mechRow>`;
-//     ulEl.append(liEl);
-//   });
-//   ulEl.style.setProperty('--rotateDegrees', rotate);
-//   infoItem(0);
-// }
-
-// function infoItem(nr) {
-//   infoNumber += nr;
-//   ulEl.style.setProperty('--currentDetail', infoNumber);
-
-//   const activeEl = document.querySelector('li.active');
-//   if (activeEl) activeEl.classList.remove('active');
-
-//   const newActiveEl = document.querySelector(
-//     `li:nth-child(${activeIndex + 1})`
-//   );
-//   newActiveEl.classList.add('active');
-// }
-
-// window.addEventListener('keydown', (e) => {
-//   switch (e.key) {
-//     case 'ArrowUp':
-//       infoItem(-1);
-//       break;
-//     case 'ArrowDown':
-//       infoItem(1);
-//       break;
-//     default:
-//       return;
-//   }
-// });

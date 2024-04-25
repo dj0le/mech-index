@@ -83,7 +83,7 @@ body {
       rgba(137, 157, 130, 0.3) 62.09%,
       rgba(97, 112, 92, 0.6) 100%
     ),
-    url('mechindexbg2.svg');
+    url('mechindexbg.svg');
   background-position: center;
   background-size: contain;
   background-color: var(--surface-1);
