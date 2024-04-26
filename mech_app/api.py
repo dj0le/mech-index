@@ -1,4 +1,5 @@
 from fastapi import Depends, FastAPI, HTTPException, Request
+from fastapi.middleware.httpsredirect import HTTPSRedirectMiddleware
 from sqlalchemy.orm import Session
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
@@ -13,6 +14,7 @@ app = FastAPI()
 
 app.mount("/static", StaticFiles(directory="mech_app/static"), name="static")
 templates = Jinja2Templates(directory="mech_app/templates")
+
 
 # Dependency
 def get_db():
