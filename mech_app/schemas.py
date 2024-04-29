@@ -31,12 +31,3 @@ class MechShort(BaseModel):
 
     class Config:
         orm_mode = True
-
-class Image(BaseModel):
-    id: int
-    fullsize: str   
-    thumbnail: str
-
-
-    class Config:
-        orm_mode = True

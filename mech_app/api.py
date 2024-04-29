@@ -47,20 +47,10 @@ print(filters)
 
 @app.get("/", response_class=HTMLResponse, include_in_schema=False)
 def get_mech_cards(request: Request, skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
-    mech_short = crud.get_mech_cards(db, skip=skip, limit=limit)
+    mech_short = crud.get_mech_short(db, skip=skip, limit=limit)
     return templates.TemplateResponse(
         "index.html", {"request": request, 'mech_cards': mech_short}
     )
-
-@app.get("/mechs/", response_model=list[schemas.MechShort])
-def get_mechs(skip: int = 0, limit: int = 30, db: Session = Depends(get_db)):
-    mechs = crud.get_mech_cards(db, skip=skip, limit=limit)
-    return mechs
-
-@app.get("/images/", response_model=list[schemas.Mech])
-def get_mechs(skip: int = 0, limit: int = 30, db: Session = Depends(get_db)):
-    mechs = crud.get_mech_cards2(db, skip=skip, limit=limit)
-    return mechs
 
 @app.get("/mechs/{mech_id}", response_class=HTMLResponse, include_in_schema=False)
 def get_mech(request: Request, mech_id: int, db: Session = Depends(get_db)):
@@ -71,9 +61,14 @@ def get_mech(request: Request, mech_id: int, db: Session = Depends(get_db)):
         "overview.html", {"request": request, 'mech': mech_details}
     )
 
-@app.get("/test/{mech_id}", response_model=schemas.Mech)
+@app.get("/mechs/", response_model=list[schemas.MechShort])
+def get_mechs(skip: int = 0, limit: int = 30, db: Session = Depends(get_db)):
+    mechs = crud.get_mech_short(db, skip=skip, limit=limit)
+    return mechs
+
+@app.get("/details/{mech_id}", response_model=schemas.Mech)
 def get_mech(request: Request, mech_id: int, db: Session = Depends(get_db)):
-    mech_details = crud.get_mech_long(db, mech_id=mech_id)
+    mech_details = crud.get_mech(db, mech_id=mech_id)
     if mech_details is None:
         raise HTTPException(status_code=404, detail="Unknown Mech")
     return mech_details
