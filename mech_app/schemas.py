@@ -1,15 +1,12 @@
 from pydantic import BaseModel
 
-class MechBase(BaseModel):
+class Mech(BaseModel):
     id: int
-
-class Mech(MechBase):
-    shortName: str
     chassis: str
     model: str
-    year: int
-    weight: int
     weightClass: str
+    weight: int
+    year: int
     cost: int
     bv: int
     isClan: str
@@ -20,18 +17,26 @@ class Mech(MechBase):
     engine: str
     heatCapacity: int
     heatSinks: int
+    fullsize: str
 
     class Config:
         orm_mode = True
 
-
-class ImageBase(BaseModel):
+class MechShort(BaseModel):
     id: int
-
-class Image(ImageBase):
-    fullsize: str
+    chassis: str
+    weightClass: str
+    year: int
     thumbnail: str
-    mech_id: int
+
+    class Config:
+        orm_mode = True
+
+class Image(BaseModel):
+    id: int
+    fullsize: str   
+    thumbnail: str
+
 
     class Config:
         orm_mode = True
