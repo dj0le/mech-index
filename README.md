@@ -2,7 +2,7 @@
 
 ## description:
 
-Mech Index is a FastAPI based app with Jinja templating for displaying various Battletech mechs. The Frontend is Vanilla JS / CSS with Open-Props V1 for some basic styling variables.
+This is the backend only version of the Mech Index. Written in fastapi.
 
 ## Deploy locally:
 
