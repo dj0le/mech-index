@@ -10,6 +10,15 @@ models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
+origins = ["https://fast.thockyspace.com/"]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_methods=["GET"],
+    allow_headers=["*"],
+)
+
 app.mount("/static", StaticFiles(directory="mech_app/static"), name="static")
 
 # Dependency
@@ -21,7 +30,7 @@ def get_db():
         db.close()
 
 @app.get("/", response_model=list[schemas.MechShort])
-def get_mechs(skip: int = 0, limit: int = 30, db: Session = Depends(get_db)):
+def get_mechs(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
     mechs = crud.get_mech_short(db, skip=skip, limit=limit)
     return mechs
 
