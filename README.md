@@ -6,7 +6,11 @@ This is the backend only version of the Mech Index. Written in fastapi.
 
 ## Deploy locally:
 
-Clone This repo, then:
+Clone This repo:
+
+- open [mech-index](https://github.com/dj0le/mech-index/)
+
+Then:
 
 - add a virtual environment
 
