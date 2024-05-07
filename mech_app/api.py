@@ -10,7 +10,7 @@ models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
-origins = ["https://fast.thockyspace.com/"]
+origins = ["*"]
 
 app.add_middleware(
     CORSMiddleware,

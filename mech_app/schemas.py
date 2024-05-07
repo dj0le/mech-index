@@ -2,17 +2,18 @@ from pydantic import BaseModel
 
 class Mech(BaseModel):
     id: int
+    shortName: str
     chassis: str
-    model: str
     weightClass: str
+    role: str
     weight: int
     year: int
     cost: int
     bv: int
-    isClan: str
+    origin: str
     armorType: str
-    totalExternalArmor: int
-    totalInternalArmor: int
+    externalArmor: int
+    internalArmor: int
     structureType: str
     engine: str
     heatCapacity: int
@@ -26,7 +27,7 @@ class MechShort(BaseModel):
     id: int
     chassis: str
     weightClass: str
-    year: int
+    role: str
     thumbnail: str
 
     class Config:

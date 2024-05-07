@@ -1,0 +1,97 @@
+id,shortName,chassis,model,year,weight,weightClass,role,cost,bv,origin,armorType,externalArmor,internalArmor,structureType,engine,heatCapacity,heatSinks
+1,ADR-Pr,Adder,Prime,3010,35,Light,Sniper,6790500,1558,Clan,Ferro-Fibrous,115,58,Endo Steel,210 XL,28,14
+2,ANH-1A,Annihilator,1A,3025,100,Assault,Juggernaut,7696667,1434,Inner Sphere,Standard,200,152,Standard,200,18,18
+3,ARC-2K,Archer,2K,3025,70,Heavy,Missile Boat,6170774,1356,Inner Sphere,Standard,176,107,Standard,280,12,12
+4,ACC-Pr,Arctic Cheetah,Prime,3038,30,Light,Striker,7737456,900,Clan,Standard,162,48,Endo Steel,240 XL,20,10
+5,ACW-1,Arctic Wolf,1,3060,40,Medium,Striker,7768693,1330,Clan,Standard,96,67,Endo Steel,280 XL,20,10
+6,ASN-101,Assassin,101,3025,40,Medium,Scout,3537263,757,Inner Sphere,Standard,64,67,Standard,280,10,10
+7,AS7-6V,Atlas,6V,3070,100,Assault,Juggernaut,12330000,2342,Inner Sphere,Standard,304,152,Standard,300,28,14
+8,AWS-9MC,Awesome,9MC,3070,80,Assault,Brawler,8405220,1743,Inner Sphere,Heavy Ferro-Fibrous,247,122,Standard,320,34,17
+9,BNC-3MR,Banshee,3MR,3073,95,Assault,Brawler,10534128,1801,Inner Sphere,Standard,240,145,Standard,380,32,16
+10,BLR-10K,BattleMaster,10K,3070,85,Assault,Brawler,9226443,1876,Inner Sphere,Ferro-Fibrous,250,130,Standard,340,36,18
+11,BL-6-KLC,Black Knight,6-KLC,3067,75,Heavy,Brawler,7763000,1772,Inner Sphere,Standard,231,114,Endo Steel,300,38,19
+12,BLL-Pr,Black Lanner,Prime,3052,55,Medium,Skirmisher,18030697,2215,Clan,Ferro-Fibrous,153,91,Endo Steel,385 XL,20,10
+13,BLA-D,Blood Asp,D,3060,90,Assault,Brawler,29309875,2396,Clan,Standard,256,138,Endo Steel,360 XL,32,16
+14,BSW-X1,Bushwacker,X1,3058,55,Medium,Skirmisher,9807366,1223,Inner Sphere,Ferro-Fibrous,161,91,Standard,275 XL,22,11
+15,CHP-4C,Champion,4C,3060,60,Heavy,Skirmisher,11805760,1760,Inner Sphere,Standard,184,99,Endo Steel,300 XL,20,10
+16,CGR-1A1,Charger,1A1,3025,80,Assault,Scout,7520370,981,Inner Sphere,Standard,160,122,Standard,400,10,10
+17,COU-Pr,Cougar,Prime,3060,35,Light,Sniper,6065438,1485,Clan,Ferro-Fibrous,105,58,Endo Steel,175 XL,20,10
+18,CRB-27,Crab,27,2750,50,Medium,Skirmisher,4050875,1198,Inner Sphere,Ferro-Fibrous,161,83,Standard,250,16,16
+19,CRD-3E,Crusader,3E,3070,65,Heavy,Missile Boat,11217360,1534,Inner Sphere,Standard,200,104,Endo Steel,260 Light,20,10
+20,CP-11-L,Cyclops,11-L,3070,90,Assault,Sniper,11795960,2170,Inner Sphere,Stealth,272,138,Endo Steel,360,20,10
+21,DV-7D,Dervish,7D,3050,55,Medium,Missile Boat,5571216,1412,Inner Sphere,Ferro-Fibrous,143,91,Endo Steel,275,20,10
+22,DIW-Pr,Dire Wolf,Prime,3050,100,Assault,Juggernaut,29350000,2712,Clan,Standard,304,152,Standard,300 XL,44,22
+23,EBJ-A,Ebon Jaguar,A,3049,65,Heavy,Skirmisher,13141764,2109,Clan,Ferro-Fibrous,304,118,Standard,325 XL,24,13
+24,EXE-Pr,Executioner,Prime,3070,95,Assault,Sniper,32471198,2884,Clan,Standard,288,145,Endo Steel,380 XL,36,18
+25,FNR-6U,Fafnir,6U,3132,100,Assault,Juggernaut,19619000,2234,Inner Sphere,Light Ferro-Fibrous,307,152,Standard,300 Light,24,12
+26,FLE-19,Flea,19,3050,20,Light,Scout,1483500,381,Inner Sphere,Standard,48,33,Endo Steel,120,10,10
+27,GRF-1P,Griffin,1P,3070,55,Medium,Skirmisher,5377157,1502,Inner Sphere,Ferro-Fibrous,161,91,Standard,275,20,10
+28,HTM-37T,Hatamoto-Chi,37T,3070,80,Assault,Juggernaut,9480720,1732,Inner Sphere,Standard,247,122,Endo Steel,320,32,16
+29,HLB-Pr,Hellbringer,Prime,3070,65,Heavy,Striker,18982906,2685,Clan,Standard,152,104,Endo Steel,325 XL,32,16
+30,HLF-2,Hellfire,2,3064,60,Heavy,Brawler,13508560,2370,Clan,Ferro-Fibrous,172,99,Standard,300 XL,36,18
+31,HSN-10SR,Hellspawn,10SR,3132,45,Medium,Striker,10421150,1411,Inner Sphere,Standard,144,75,Endo Steel,270 XL,20,10
+32,HGN-IIC,Highlander,IIC,3060,90,Assault,Missile Boat,10091280,2979,Clan,Ferro-Fibrous,278,138,Standard,270,24,12
+33,HBK-IIR,Hunchback II,R,3070,50,Medium,Ambusher,7429000,2034,Clan,Standard,96,83,Endo Steel,200 XL,20,10
+34,HNT-Pr,Huntsman,Prime,3058,50,Medium,Skirmisher,12634375,2108,Clan,Ferro-Fibrous,169,83,Endo Steel,250 XL,20,10
+35,ICS-3,Incubus,3,3055,30,Light,Striker,5326490,1324,Clan,Ferro-Fibrous,105,51,Endo Steel,270 XL,20,10
+36,JVN-11F,Javelin,11F,3072,30,Light,Striker,4110990,827,Inner Sphere,Standard,96,51,Endo Steel,180 XL,20,10
+37,JNR-MI,Jenner,MI,3070,35,Light,Striker,5864625,1175,Inner Sphere,Ferro-Fibrous,107,58,Standard,245 XL,20,10
+38,KGC-011,King Crab,011,3070,100,Assault,Juggernaut,20410000,2437,Inner Sphere,Ferro-Fibrous,304,152,Standard,300 Light,20,10
+39,KTO-IIC,Kintaro,IIC,3070,55,Medium,Skirmisher,5725906,1773,Clan,Ferro-Fibrous,182,91,Endo Steel,275,26,13
+40,KFX-Pr,Kit Fox,Prime,3050,30,Light,Sniper,5368837,1085,Clan,Ferro-Fibrous,76,51,Endo Steel,180 XL,20,10
+41,KDK-RD,Kodiak,RD,3070,100,Assault,Brawler,29128333,2961,Clan,Standard,307,152,Endo Steel,400 XL,40,20
+42,LBR-Pr,Linebacker,Prime,3055,65,Heavy,Skirmisher,20277984,2390,Clan,Ferro-Fibrous,192,104,Endo Steel,390 XL,28,14
+43,LCT-5A,Locust,5A,3070,20,Light,Scout,2885600,602,Inner Sphere,Ferro-Fibrous,69,33,Endo Steel,200 XL,10,10
+44,LGB-13C,Longbow,13C,3070,85,Assault,Missile Boat,22325646,1397,Inner Sphere,Standard,200,130,Standard,340 XL,24,12
+45,MDCT-MkII,Mad Cat,MkII,3132,55,Medium,Skirmisher,12530200,2095,Clan,Ferro-Fibrous,185,91,Endo Steel,330 XL,32,16
+46,MDG-V,Mad Dog,V,2963,60,Heavy,Skirmisher,15300000,1944,Clan,Ferro-Fibrous,163,99,Standard,300 XL,24,12
+47,MAD-II-6D,Marauder II,6D,3083,100,Assault,Brawler,24950000,2378,Inner Sphere,Standard,304,152,Standard,300 XL,28,14
+48,MAD-5R,Marauder,5R,3067,75,Heavy,Brawler,16233000,1877,Inner Sphere,Standard,224,114,Standard,300 XL,34,17
+49,MAL-2K,Mauler,2K,3070,90,Assault,Sniper,10089000,1624,Inner Sphere,Standard,208,138,Endo Steel,270,24,12
+50,NG-A,Night Gyr,A,3058,75,Heavy,Skirmisher,20764844,2680,Clan,Ferro-Fibrous,220,114,Endo Steel,300 XL,32,16
+51,NSR-9JS,Nightstar,9JS,3070,95,Assault,Juggernaut,16593428,2459,Inner Sphere,Standard,293,145,Standard,285 Light,20,10
+52,NV-B,Nova,B,3050,50,Medium,Sniper,10678281,1543,Clan,Standard,160,83,Standard,250 XL,28,14
+53,NCT-Pr,Nova Cat,Prime,3060,70,Heavy,Sniper,17672917,2530,Clan,Standard,216,107,Endo Steel,280 XL,50,25
+54,ON1-IIC-6,Orion,IIC-6,3070,75,Heavy,Brawler,9021250,2051,Clan,Ferro-Fibrous,230,114,Endo Steel,300,26,13
+55,OSR-7D,Osiris,7D,3070,30,Light,Scout,5279300,1030,Inner Sphere,Ferro-Fibrous,80,51,Endo Steel,240 XL,20,10
+56,PHK-2K,Phoenix Hawk,2K,3070,45,Medium,Sniper,4309690,1258,Inner Sphere,Ferro-Fibrous,143,75,Endo Steel,270,26,13
+57,PR-A,Piranha,A,3058,20,Light,Striker,2780940,998,Clan,Standard,64,33,Endo Steel,180 XL,10,10
+58,RVN-X,Raven,X,3078,35,Light,Striker,7725375,1050,Inner Sphere,Ferro-Fibrous,89,58,Composite,210 XL,20,10
+59,RFL-II-3N,Rifleman II,3N,3070,80,Assault,Sniper,20049599,1560,Inner Sphere,Standard,192,122,Endo Steel,320 XL,30,15
+60,RFL-5R,Rifleman,5R,3075,60,Heavy,Sniper,6576000,1380,Inner Sphere,Light Ferro-Fibrous,152,99,Endo Steel,240,22,11
+61,CTF-1X,Cataphract,1X,3025,70,Heavy,Brawler,5998054,1316,Inner-Sphere,Standard,176,107,Standard,280,16,16
+62,SCT-Pr,Shadow Cat,Prime,3058,45,Medium,Striker,11785510,2156,Clan,Ferro-Fibrous,134,75,Endo Steel,270 XL,20,10
+63,SHK-8M,Shadow Hawk,8M,3070,55,Medium,Striker,11840656,1453,Inner Sphere,Light Ferro-Fibrous,169,91,Endo Steel,275 XL,20,10
+64,STK-7M,Stalker,7M,3070,85,Assault,Juggernaut,95117750,1877,Inner Sphere,Standard,263,130,Standard,255,32,16
+65,SCR-BW,Stormcrow,BW,3070,55,Medium,Striker,15338509,1938,Clan,Ferro-Fibrous,182,91,Endo Steel,330 XL,26,13
+66,SMR-Pr,Summoner,Prime,3050,70,Heavy,Sniper,21320834,2298,Clan,Ferro-Fibrous,182,107,Standard,350 XL,28,14
+67,SRN-3,Supernova,3,3067,90,Assault,Missile Boat,9507600,3448,Clan,Standard,272,138,Endo Steel,270,46,23
+68,TNS-4T,Thanatos,4T,3070,75,Heavy,Skirmisher,16793438,1760,Inner Sphere,Standard,208,114,Endo Steel,300 XL,24,12
+69,TDR-5T,Thunderbolt,5T,3070,65,Heavy,Brawler,5846885,1455,Inner Sphere,Standard,208,104,Standard,260,24,12
+70,TWF-Pr,Timber Wolf,Prime,3050,75,Heavy,Skirmisher,24233124,2737,Clan,Ferro-Fibrous,230,114,Endo Steel,375 XL,34,17
+71,UM-AIV,UrbanMech,AIV,3078,30,Light,Ambusher,2488200,603,Inner Sphere,Standard,96,51,Endo Steel,60 XL,10,10
+72,UZL-4S,Uziel,4S,3065,50,Medium,Ambusher,10164000,1161,Inner Sphere,Standard,128,83,Endo Steel,300 XL,22,11
+73,VREE-5,Vapor Eagle,5,3055,55,Medium,Skirmisher,12522527,2277,Clan,Ferro-Fibrous,172,91,Endo Steel,330 XL,32,16
+74,VTR-10D,Victor,10D,3060,80,Assault,Skirmisher,9178320,1894,Inner Sphere,Standard,208,122,Endo Steel,320,24,12
+75,VND-3L,Vindicator,3L,3050,45,Medium,Brawler,3524370,1105,Inner Sphere,Standard,144,75,Standard,180,30,15
+76,VPR-Pr,Viper,Prime,3050,40,Medium,Brawler,11051658,1450,Clan,Ferro-Fibrous,134,67,Endo Steel,320 XL,20,10
+77,VT-6X,Vulcan,6X,3070,40,Medium,Scout,6028750,952,Inner Sphere,Standard,112,67,Endo Steel,240 Light,20,10
+78,CPLT-8H,Catapult,8H,3060,65,Heavy,Missile Boat,5694425,1448,Inner-Sphere,Ferror-Fibrous,188,104,Standard,260,30,15
+79,CN10-B2,Centurion,B2,3070,55,Medium,Brawler,8361320,1226,Inner-Sphere,Standard,176,91,Endo Steel,220Light,20,10
+80,WHM-II-CG,Warhammer II,IICG,3070,80,Assault,Brawler,19733249,3096,Clan,Hardened,228,122,Endo Steel,320 XL,38,19
+81,WHM-9TC,Warhammer,9TC,3070,70,Heavy,Brawler,16550067,1704,Inner Sphere,Ferro-Fibrous,179,107,Standard,350 XL,36,18
+82,WHK-Pr,Warhawk,Prime,3050,85,Assault,Sniper,26425323,3194,Clan,Ferro-Fibrous,259,130,Standard,340 XL,40,20
+83,WLF-5DS,Wolfhound,5DS,3070,35,Light,Striker,3423330,1122,Inner Sphere,Standard,112,58,Endo Steel,210,24,12
+84,CDA-2B,Cicada,2B,3025,40,Medium,Scout,3692967,626,Inner-Sphere,Standard,56,67,Standard,320,10,10
+85,COM-1D,Commando,1D,2480,25,Light,Striker,1845000,558,Inner-Sphere,Standard,48,43,Standard,150,10,10
+86,ENF-4r,Enforcer,4R,3025,50,Medium,Skirmisher,35368750,1032,Inner-Sphere,Standard,144,83,Standard,200,12,12
+87,FS10,Firestarter,10,3070,35,Light,Scout,32751000,813,Inner-Sphere,Standard,112,58,Endo Steel,210,20,10
+88,GHR-5H,Grasshopper,5H,3025,70,Heavy,Skirmisher,60245740,1427,Inner-Sphere,Standard,208,107,Standard,280,22,22
+89,HBK-5G,Hunchback,5G,3070,50,Medium,Juggernaut,45488750,1259,Inner-Sphere,Ferro-Fibrous,161,83,Endo Steel,250,20,10
+90,QKD-5k2,Quickdraw,5K2,3057,60,Heavy,Skirmisher,57161600,1312,Inner-Sphere,Ferro-Fibrous,143,99,Standard,300,34,17
+91,ST-105,Shootist,105,3073,70,Heavy,Brawler,72502740,1912,Inner-Sphere,Standard,215,107,Endo Steel,280,20,10
+92,SDR-7k,Spider,7K,3132,30,Light,Scout,45068400,752,Inner-Sphere,Ferro-Fibrous,98,51,Endo Steel,240Light,20,10
+93,TBT-3C,Trebuchet,3C,2750,50,Medium,Missile Boat,90410000,1416,Inner-Sphere,Standard,160,83,Endo Steel,250XL,20,10
+94,VLK-IIC,Valkyrie,IIC,3025,30,Light,Missile Boat,44801900,1431,Clan,Standard,105,51,Endo Steel,180XL,20,10
+95,WVR-7H,Wolverine,7H,2750,55,Medium,Skirmisher,56685560,1301,Inner-Sphere,Ferro-Fibrous,161,91,Endo Steel,275,20,10
+96,ZS-10TZ,Zeus,10TZ,3070,80,Heavy,Sniper,15161470,1934,Inner-Sphere,Ferro-Fibrous,241,122,Standard,320Light,32,16

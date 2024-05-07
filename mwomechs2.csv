@@ -1,0 +1,17 @@
+shortName,chassis,model,year,weight,weightClass,cost,bv,isClan,armorType,totalExternalArmor,totalInternalArmor,structureType,engine,heatCapacity,heatSinks
+Cataphract CTF-1X,Cataphract,CTF-1X,3025,70,Heavy,5998054,1316,Inner-Sphere,Standard,176,107,Standard,280,16,16
+Catapult CPLT-8H,Catapult,CPLT-8H,3060,65,Heavy,5694425,1448,Inner-Sphere,Ferror-Fibrous,188,104,Standard,260,30,15
+Centurion CN10-B2,Centurion,CN10-B2,3070,55,Medium,8361320,1226,Inner-Sphere,Standard,176,91,Endo Steel,220Light,20,10
+Cicada CDA-2B,Cicada,CDA-2B,3025,40,Medium,3692967,626,Inner-Sphere,Standard,56,67,Standard320,10,10
+Commando COM-1D,Commando,COM-1D,2480,25,Light,1845000,558,Inner-Sphere,Standard,48,43,Standard,150,10,10
+Enforcer ENF-4r,Enforcer,ENF-4R,3025,50,Medium,35368750,1032,Inner-Sphere,Standard,144,83,Standard,200,12,12
+Firestarter FS10,Firestarter,FS10,3070,35,Light,32751000,813,Inner-Sphere,Standard,112,58,Endo Steel,210,20,10
+Grasshopper GHR-5H,Grasshopper,GHR-5H,3025,70,Heavy,60245740,1427,Inner-Sphere,Standard,208,107,Standard,280,22,22
+Hunchback HBK-5G,Hunchback,HBK-5G,3070,50,Medium,45488750,1259,Inner-Sphere,Ferro-Fibrous,161,83,Endo Steel,250,20,10
+Quickdraw QKD-5k2,Quickdraw,QKD-5K2,3057,60,Heavy,57161600,1312,Inner-Sphere,Ferro-Fibrous,143,99,Standard,300,34,17
+Shootist ST-105,Shootist,ST-105,3073,70,Heavy,72502740,1912,Inner-Sphere,Standard,215,107,Endo Steel,280,20,10
+Spider SDR-7k,Spider,SDR-7K,3132,30,Light,45068400,752,Inner-Sphere,Ferro-Fibrous,98,51,Endo Steel,240Light,20,10
+Trebuchet TBT-3C,Trebuchet,TBT-3C,2750,50,Medium,90410000,1416,Inner-Sphere,Standard,160,83,Endo Steel,250XL,20,10
+Valkyrie VLK-IIC,Valkyrie,VLK-IIC,3025,30,Light,44801900,1431,Clan,Standard,105,51,Endo Steel,180XL,20,10
+Wolverine WVR-7H,Wolverine,WVR-7H,2750,55,Medium56685560,1301,Inner-Sphere,Ferro-Fibrous,161,91,Endo Steel275,20,10
+Zeus 10TZ,Zeus,10TZ,3070,80,Heavy,15161470,1934,Inner-Sphere,Ferro-Fibrous,241,122,Standard,320Light,32,16
