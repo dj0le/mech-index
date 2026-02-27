@@ -1,4 +1,4 @@
-from fastapi import Depends, FastAPI, HTTPException, Request
+from fastapi import Depends, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 from fastapi.staticfiles import StaticFiles
@@ -21,6 +21,7 @@ app.add_middleware(
 
 app.mount("/static", StaticFiles(directory="mech_app/static"), name="static")
 
+
 # Dependency
 def get_db():
     db = SessionLocal()
@@ -29,14 +30,7 @@ def get_db():
     finally:
         db.close()
 
-@app.get("/", response_model=list[schemas.MechShort])
-def get_mechs(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
-    mechs = crud.get_mech_short(db, skip=skip, limit=limit)
-    return mechs
 
-@app.get("/details/{mech_id}", response_model=schemas.Mech)
-def get_mech(request: Request, mech_id: int, db: Session = Depends(get_db)):
-    mech_details = crud.get_mech(db, mech_id=mech_id)
-    if mech_details is None:
-        raise HTTPException(status_code=404, detail="Unknown Mech")
-    return mech_details
+@app.get("/", response_model=list[schemas.Mech])
+def get_mechs(db: Session = Depends(get_db)):
+    return crud.get_all_mechs(db)

@@ -3,6 +3,7 @@ from sqlalchemy.orm import relationship
 
 from .database import Base
 
+
 class Mech(Base):
     __tablename__ = "mwomechs"
 
@@ -25,7 +26,8 @@ class Mech(Base):
     heatCapacity = Column(Integer)
     heatSinks = Column(Integer)
 
-    image = relationship("Image", back_populates="owner")
+    images = relationship("Image", back_populates="mech")
+
 
 class Image(Base):
     __tablename__ = "mech_images"
@@ -33,6 +35,6 @@ class Image(Base):
     id = Column(Integer, primary_key=True)
     fullsize = Column(String)
     thumbnail = Column(String)
-    mech_id = Column (Integer, ForeignKey("mwomechs.id"))
+    mech_id = Column(Integer, ForeignKey("mwomechs.id"))
 
-    owner = relationship("Mech", back_populates="image")
+    mech = relationship("Mech", back_populates="images")

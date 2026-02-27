@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 
+
 class Mech(BaseModel):
     id: int
     shortName: str
@@ -18,17 +19,8 @@ class Mech(BaseModel):
     engine: str
     heatCapacity: int
     heatSinks: int
+    thumbnail: str
     fullsize: str
 
     class Config:
-        orm_mode = True
-
-class MechShort(BaseModel):
-    id: int
-    chassis: str
-    weightClass: str
-    role: str
-    thumbnail: str
-
-    class Config:
-        orm_mode = True
+        from_attributes = True
